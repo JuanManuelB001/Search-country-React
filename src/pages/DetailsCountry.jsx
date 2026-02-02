@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { CountryCoatOfArms } from "../components/CountryCoatOfArms";
+import { GoogleMaps } from "../components/GoogleMaps";
 
 export function DetailsCountry({props}){
     const {state} = useLocation();
@@ -11,6 +12,7 @@ export function DetailsCountry({props}){
     }
 
     console.log(country);
+    
     return(
         <div >
             Details Country Page
@@ -25,7 +27,7 @@ export function DetailsCountry({props}){
                 <CountryCoatOfArms png={country.flags?.png} svg={country.flags?.svg} alt={country.flags.alt} />
             }
 
-            <p>{country.capital?.[0] || "no capital"}</p>
+            <p>capital: {country.capital?.[0] || "no capital"}</p>
             {
                 country.currencies &&
                 Object.values(country.currencies).map((current) =>(
@@ -36,6 +38,10 @@ export function DetailsCountry({props}){
                 country.borders?.map((border) =>(
                     <p key={border}>{border}</p>
                 ))
+            }
+            {
+                /* MAPA GOOGLE MAPS */
+                <a href={country.maps?.googleMaps}>Ir a Google maps</a>
             }
         </div>
     );
