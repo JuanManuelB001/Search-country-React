@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-
+import "../styles/country.css"
 export function Country({ props }) {
   return (
-    <div>
+    <div className="country">
       {props.map((country, index) => (
         <Link key={index} to={"country-details"} state={{country}} >
           <div >
