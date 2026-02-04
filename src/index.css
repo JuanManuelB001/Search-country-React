@@ -28,7 +28,7 @@ body {
       rgba(10, 99, 222, 0.25),
       rgba(15, 113, 179, 0.05) 
     ),
-    url("./img/background_search.png") no-repeat fixed center ;
+    url("./img/background_search.jpg") no-repeat fixed  ;
     background-size: cover;
 }
 
