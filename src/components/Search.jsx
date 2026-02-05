@@ -38,7 +38,7 @@ export function Search() {
   return (
     <div>
       <form className="formulario" onSubmit={handleSubmit}>
-        <label htmlFor="dato">Ingrese pais</label>
+        <label htmlFor="dato" >Ingrese pais</label>
         <input
           className="input-text"
           type="text"
