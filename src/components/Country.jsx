@@ -10,23 +10,30 @@ export function Country({ props }) {
     <div className="country">
       {props.map((country, index) => (
         <div key={index} className="country-index">
+          
+          <button
+            className="info-btn"
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpen(open === index ? null : index);
+            }}
+          >
+            !
+          </button>
+
           <Link
-            to={"country-details"}
+            to="country-details"
             state={{ country }}
             className="link-country"
           >
             <div className="container-country">
-              <button
-                className="info-btn"
-                onClick={e => {
-                  e.preventDefault();  // Evita que el Link se active al hacer click en el botón
-                  setOpen(open === index ? null : index);
-                }}
-              >
-                !
-              </button>
-              <img src={country.flags.png} alt={country.name.common} />
-              <p className="name-common">{country.name.common}</p>
+              <img
+                src={country.flags.png}
+                alt={country.name.common}
+              />
+              <p className="name-common">
+                {country.name.common}
+              </p>
             </div>
           </Link>
 
