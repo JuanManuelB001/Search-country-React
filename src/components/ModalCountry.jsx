@@ -1,6 +1,6 @@
 import "../styles/modalCountry.css"
 
-export function ModalCountry({country, onClose}){
+export function ModalCountry({country}){
     return(
          <>
       <h4>{country.name.common}</h4>
