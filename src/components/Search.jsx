@@ -33,7 +33,7 @@ export function Search() {
   const handleReset = (event) => {
     event.preventDefault();
     setCharacterName("");
-    setCharacterData(null);
+    setCharacterData([]);
   };
   return (
     <div>

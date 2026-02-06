@@ -12,12 +12,14 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   transition: 2 linear;
+  
 }
 button:hover {
   border-color: #646cff;
   box-shadow: 0 10px 20px rgba(100, 108, 255, 0.5);
   transform: translatey(-2px);
 }
+
 .formulario {
 }
 label {

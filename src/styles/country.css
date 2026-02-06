@@ -25,3 +25,11 @@
 .container-country:hover .name-common {
   opacity: 1;
 }
+
+
+@media (max-width:560px){
+  .country{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
