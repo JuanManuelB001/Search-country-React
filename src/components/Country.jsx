@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export function Country({ props }) {
   const [open, setOpen] = useState(null);
-
   return (
     <div className="country">
       {props.map((country, index) => (
@@ -17,8 +16,7 @@ export function Country({ props }) {
               e.stopPropagation();
               setOpen(open === index ? null : index);
             }}
-          >
-            !
+          ><p className="p-i">i</p>
           </button>
 
           <Link

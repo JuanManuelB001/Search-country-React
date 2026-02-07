@@ -2,7 +2,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 22px;
   padding: 1em;
   background: rgba(245, 222, 179, 0.5);
 }
@@ -10,17 +10,22 @@
 .country-index {
   position: relative; /* Importante para que el popover absoluto se posicione relativo aquí */
 }
-
-
+.p-i{
+  margin: 0;
+  position: relative;
+  bottom: 6px;
+}
 .info-btn {
+
   position: absolute;
   top: 8px;
   right: 8px;
   width: 28px;
   height: 28px;
-  border-radius: 6px;
-  background: white;
-  color: black;
+  padding: 10px 8px;
+  border-radius: 25%;
+  background: rgb(193, 77, 4);
+  color: rgb(245, 234, 234);
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
@@ -43,6 +48,10 @@
 
 .container-country:hover .name-common {
   opacity: 1;
+}
+
+.container-country:hover img {
+  transform: scale(1.1);
 }
 
 /* popover pegado al botón */
