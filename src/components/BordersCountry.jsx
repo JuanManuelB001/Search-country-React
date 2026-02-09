@@ -6,12 +6,10 @@ export function BordersCountry({props}){
     const [characterData, setCharacterData] = useState([]);
     const [isloading, setIsLoading] =useState(false)
     
-    console.log(props)
 
     const searchBorder = ()=>{
         props.forEach(border => {
             let contador = 0;
-            console.log(contador)
             UrlData("/alpha/" + border)
             .then((data) =>{
                 setCharacterData(prev => [...prev, data]);
@@ -25,7 +23,7 @@ export function BordersCountry({props}){
         setCharacterData([])
         searchBorder()
     },[])
-    console.log('character ',characterData)
+    
     return(
         <div>
             <h4>Borders</h4>

@@ -23,12 +23,14 @@ export function DetailsCountry({ props }) {
   console.log(country);
 
   return (
+    <div className="wraper-details">
+      <h2 className="country-title" >{country.name.common}</h2>
     <div className="container-detail">
       <div className="flags">
         {
           /* ESCUDO */
           countCoats() && (
-            <CountryCoatOfArms
+            <CountryCoatOfArms type="coat"
               png={country.coatOfArms?.png}
               svg={country.coatOfArms?.svg}
               alt={`coat of amrs of ${country.name?.common}`}
@@ -38,6 +40,7 @@ export function DetailsCountry({ props }) {
         {
           /*BANDERA */
           <CountryCoatOfArms
+          type={"flag"}
             png={country.flags?.png}
             svg={country.flags?.svg}
             alt={country.flags.alt}
@@ -45,18 +48,18 @@ export function DetailsCountry({ props }) {
         }
       </div>
       <div className="info">
-        <p>capital: {country.capital?.[0] || "no capital"}</p>
-        <p>Continent: {country.continents?.[0] || "No continet "}</p>
+        <p className="country-info">capital: {country.capital?.[0] || "no capital"}</p>
+        <p className="country-info">Continent: {country.continents?.[0] || "No continet "}</p>
         {country.currencies &&
           Object.values(country.currencies).map((current) => (
-            <p key={current.name}>
-              currencies: {current.name}, Symbol {current.symbol} 
+            <p key={current.name} >
+              <p className="country-info" >currencies:{current.name}, Symbol {current.symbol} </p> 
             </p>
           ))}
           {country.languages && (
-            <p>Languages: {Object.values(country?.languages).join(", ")}</p>
+            <p className="country-info">Languages: {Object.values(country?.languages).join(", ")}</p>
           )}
-          <div>Population: {<StartRate popularity={country.population}/>}</div>
+          <div><p className="country-info">Population: {<StartRate popularity={country.population}/>}</p></div>
 
         {
           /* MAPA GOOGLE MAPS */
@@ -69,6 +72,6 @@ export function DetailsCountry({ props }) {
         border.length >0 && (<BordersCountry props={border}/>)
       }
     </div>
-
+</div>
   );
 }
