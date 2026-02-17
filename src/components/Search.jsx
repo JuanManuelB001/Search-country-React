@@ -3,7 +3,7 @@ import "../styles/search.css";
 import { UrlData } from "../data/UrlData";
 import { Loading } from "./Loading";
 import { Country } from "./Country";
-
+import { Footer } from "./Footer";
 export function Search() {
   const [characterName, setCharacterName] = useState("");
   const [characterData, setCharacterData] = useState([]);
@@ -60,6 +60,7 @@ export function Search() {
       {!loading && characterData.length > 0 && (
         <Country props={characterData} />
       )}
+
     </div>
   );
 }
