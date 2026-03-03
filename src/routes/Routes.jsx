@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { SearchPage } from "../pages/SearchPage";
 import { DetailsCountry } from "../pages/DetailsCountry";
 export function MyRoutes(){
