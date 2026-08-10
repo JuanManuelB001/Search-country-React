@@ -12,7 +12,6 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   transition: 2 linear;
-  
 }
 button:hover {
   border-color: #646cff;
@@ -27,17 +26,51 @@ label {
   letter-spacing: 3px;
   font-size: 2.2rem;
 }
+
+.search-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.input-container {
+  width: 70%;
+}
+
+.search-icon {
+  position: absolute;
+  left: calc(17.2%);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
 .input-text {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   outline: none;
-  border: 1 solid #000;
+  width: 100%;
+  padding: 14px 16px 14px 50px;
   border: none;
+  border-radius: 12px;
   outline: none;
-  padding: 0.2em;
-  padding: 8px 10px;
-  font-size: 12px;
+  font-size: 16px;
 }
+
 .input-text:focus {
   border-color: #646cff;
   box-shadow: 0 10px 30px rgba(201, 203, 234, 0.8);

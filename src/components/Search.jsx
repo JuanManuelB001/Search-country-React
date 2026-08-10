@@ -4,6 +4,7 @@ import { UrlData } from "../data/UrlData";
 import { Loading } from "./Loading";
 import { Country } from "./Country";
 import { Footer } from "./Footer";
+import { icons } from "../assets/icons/icons";
 export function Search() {
   const [characterName, setCharacterName] = useState("");
   const [characterData, setCharacterData] = useState([]);
@@ -38,16 +39,27 @@ export function Search() {
   return (
     <div>
       <form className="formulario" onSubmit={handleSubmit}>
-        <label htmlFor="dato" >Search Country</label>
-        <input
-          className="input-text"
-          type="text"
-          id="dato"
-          name="dato"
-          value={characterName}
-          placeholder="Ingrese datos paises"
-          onChange={handleChange}
-        />
+        <div className="hero-container">
+          <p className="hero-subtitle">
+            Explore the world Discover information about any country
+          </p>
+        </div>
+        <label htmlFor="dato"></label>
+        <div className="search-container">
+          <icons.giWorld className="search-icon" />
+
+          <div className="input-container">
+            <input
+              className="input-text"
+              type="text"
+              id="dato"
+              name="dato"
+              value={characterName}
+              placeholder="Search Country"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
 
         <div className="buttons">
           <button type="submit">Submit</button>
@@ -60,7 +72,6 @@ export function Search() {
       {!loading && characterData.length > 0 && (
         <Country props={characterData} />
       )}
-
     </div>
   );
 }
